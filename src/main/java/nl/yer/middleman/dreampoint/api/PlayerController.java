@@ -1,6 +1,7 @@
 package nl.yer.middleman.dreampoint.api;
 
 import nl.yer.middleman.dreampoint.model.player.Player;
+import nl.yer.middleman.dreampoint.model.playingfield.Playingfield;
 import nl.yer.middleman.dreampoint.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

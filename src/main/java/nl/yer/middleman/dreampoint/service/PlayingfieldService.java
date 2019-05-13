@@ -2,7 +2,9 @@ package nl.yer.middleman.dreampoint.service;
 
 
 import nl.yer.middleman.dreampoint.model.playingfield.Playingfield;
+import nl.yer.middleman.dreampoint.persistence.PieceRepository;
 import nl.yer.middleman.dreampoint.persistence.PlayingfieldRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -11,6 +13,9 @@ import java.util.Optional;
 @Service
 public class PlayingfieldService {
     private PlayingfieldRepository playingfieldRepository;
+
+    @Autowired
+    private PieceRepository pieceRepository;
 
     public  PlayingfieldService (PlayingfieldRepository playingfieldRepository){
 
