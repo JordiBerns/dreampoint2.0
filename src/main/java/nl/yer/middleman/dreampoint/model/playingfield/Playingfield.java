@@ -4,6 +4,7 @@ import nl.yer.middleman.dreampoint.model.Piece;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @Entity
@@ -26,6 +27,10 @@ public class Playingfield {
         this.pieces.add(piece);
     }
 
+    public Set<Piece> getPieces() {
+        return this.pieces;
+    }
+
     public long getId() {
         return id;
     }
@@ -46,4 +51,19 @@ public class Playingfield {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public Set<Piece> generatePieceSet(int difficulty){
+        Set<Piece> pieceMap = new HashSet<>();
+        int nrEnemies = difficulty*2 + 2;
+        int x;
+        int y;
+        for(int i = 0; i <= nrEnemies; i++){
+            x = (int) (Math.random()*this.width);
+            y = (int) (Math.random()*this.height);
+            pieceMap.add(new Piece(y, x));
+        }
+
+        return pieceMap;
+    }
+
 }
