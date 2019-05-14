@@ -20,6 +20,15 @@ public class Piece {
     public Piece(){
     }
 
+    public Piece(Playingfield playingfield){
+        this.playingfield = playingfield;
+    }
+
+
+    public void setPlayingfield(Playingfield playingfield) {
+        this.playingfield = playingfield;
+    }
+
     public Piece(int yPosition, int xPosition) {
         this.yPosition = yPosition;
         this.xPosition = xPosition;

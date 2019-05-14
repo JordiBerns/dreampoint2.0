@@ -33,9 +33,11 @@ public class PlayerService {
 
         Set<Piece> pieces = playingfield.generatePieceSet(1); //For future: player.getDifficulty()
         for (Piece piece : pieces){
-            this.pieceRepository.save(piece);
             playingfield.addPiece(piece);
+            this.pieceRepository.save(piece);
+
         }
+        this.playingfieldRepository.save(playingfield);
 
         return this.playerRepository.save(player);
     }

@@ -9,13 +9,14 @@ import java.util.Set;
 
 @Entity
 public class Playingfield {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private int width;
     private int height;
 
-    @OneToMany
+    @OneToMany(mappedBy = "playingfield")
     private Set<Piece> pieces = new HashSet<>();
 
     public Playingfield(){
@@ -25,6 +26,7 @@ public class Playingfield {
 
     public void addPiece(Piece piece){
         this.pieces.add(piece);
+        piece.setPlayingfield(this);
     }
 
     public Set<Piece> getPieces() {
