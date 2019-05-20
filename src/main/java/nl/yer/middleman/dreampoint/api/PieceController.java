@@ -40,7 +40,7 @@ public class PieceController {
         if(optionalPiece.isPresent()) {
             Piece target = optionalPiece.get();
 
-            target.setName(input.getName());
+//            target.setName(input.getName());
             target.setyPosition(input.getyPosition());
             target.setxPosition(input.getxPosition());
 
