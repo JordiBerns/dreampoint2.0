@@ -1,5 +1,7 @@
 package nl.yer.middleman.dreampoint.model.playingfield;
 
+import nl.yer.middleman.dreampoint.model.Pieces.Enemy;
+import nl.yer.middleman.dreampoint.model.Pieces.Hero;
 import nl.yer.middleman.dreampoint.model.Pieces.Piece;
 
 import javax.persistence.*;
@@ -57,13 +59,15 @@ public class Playingfield {
     public Set<Piece> generatePieceSet(int difficulty){
         Set<Piece> pieceMap = new HashSet<>();
         int nrEnemies = difficulty*2 + 2;
-        int x;
-        int y;
-        for(int i = 0; i <= nrEnemies; i++){
-            x = (int) (Math.random()*this.width);
-            y = (int) (Math.random()*this.height);
-            pieceMap.add(new Piece(y, x));
+        int x = (int) (Math.random()*this.width);
+        int y = (int) (Math.random()*this.height);
+
+        for(int i = 0; i <= nrEnemies; i++) {
+            pieceMap.add(new Enemy(y, x));
+            x = (int) (Math.random() * this.width);
+            y = (int) (Math.random() * this.height);
         }
+        pieceMap.add(new Hero(y, x));
 
         return pieceMap;
     }
