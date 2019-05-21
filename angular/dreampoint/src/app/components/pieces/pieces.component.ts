@@ -10,6 +10,7 @@ import { PieceService } from 'src/app/services/piece.service';
 export class PiecesComponent implements OnInit {
 
   pieces:Piece[];
+  move:string
   constructor(private pieceService:PieceService) { }
 
   ngOnInit() {
@@ -19,5 +20,10 @@ export class PiecesComponent implements OnInit {
     this.pieceService.list().subscribe(data => {
       this.pieces = data;
     });
+  }
+
+  movePiece(){
+    this.pieceService.move(this.move).subscribe(() => this.listAll())
+    
   }
 }
