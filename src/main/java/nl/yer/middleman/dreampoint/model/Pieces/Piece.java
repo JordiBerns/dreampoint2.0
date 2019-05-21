@@ -1,4 +1,4 @@
-package nl.yer.middleman.dreampoint.model;
+package nl.yer.middleman.dreampoint.model.Pieces;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Piece {
+public abstract class Piece {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

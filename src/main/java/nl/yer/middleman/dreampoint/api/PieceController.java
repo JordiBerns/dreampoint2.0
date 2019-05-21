@@ -1,6 +1,6 @@
 package nl.yer.middleman.dreampoint.api;
 
-import nl.yer.middleman.dreampoint.model.Piece;
+import nl.yer.middleman.dreampoint.model.Pieces.Piece;
 import nl.yer.middleman.dreampoint.service.PieceService;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +37,23 @@ public class PieceController {
     @PutMapping("{id}")
     public Piece update(@PathVariable long id, @RequestBody Piece input) {
         Optional<Piece> optionalPiece = this.pieceService.findById(id);
+        if(optionalPiece.isPresent()) {
+            Piece target = optionalPiece.get();
+
+//            target.setName(input.getName());
+            target.setyPosition(input.getyPosition());
+            target.setxPosition(input.getxPosition());
+
+            return this.pieceService.save(target);
+        }
+        else {
+            return null;
+        }
+    }
+
+    @PutMapping("{id}")
+    public Piece move(@PathVariable String name, @RequestBody Piece input) {
+        Optional<Piece> optionalPiece = this.pieceService.findByName(name);
         if(optionalPiece.isPresent()) {
             Piece target = optionalPiece.get();
 

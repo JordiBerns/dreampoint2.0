@@ -1,6 +1,6 @@
 package nl.yer.middleman.dreampoint.model.playingfield;
 
-import nl.yer.middleman.dreampoint.model.Piece;
+import nl.yer.middleman.dreampoint.model.Pieces.Piece;
 
 import javax.persistence.*;
 import java.util.HashSet;
