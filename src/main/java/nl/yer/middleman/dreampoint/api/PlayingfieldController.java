@@ -39,7 +39,7 @@ public class PlayingfieldController {
         return this.playingfieldService.save(playingfield);
     }
 
-    /*@PutMapping("{id}")
+    @PutMapping("{id}")
     public Playingfield update(@PathVariable long id, @RequestBody Playingfield input){
         Optional<Playingfield> optionalTarget = this.playingfieldService.findById(id);
         if(optionalTarget.isPresent()){
@@ -52,7 +52,7 @@ public class PlayingfieldController {
 
 
     }
-    */
+
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable long id){
