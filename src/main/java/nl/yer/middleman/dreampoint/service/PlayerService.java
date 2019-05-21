@@ -1,6 +1,7 @@
 package nl.yer.middleman.dreampoint.service;
 
-import nl.yer.middleman.dreampoint.model.Piece;
+
+import nl.yer.middleman.dreampoint.model.Pieces.Piece;
 import nl.yer.middleman.dreampoint.model.player.Player;
 import nl.yer.middleman.dreampoint.model.playingfield.Playingfield;
 import nl.yer.middleman.dreampoint.persistence.PieceRepository;

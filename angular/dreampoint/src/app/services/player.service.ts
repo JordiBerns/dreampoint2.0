@@ -16,4 +16,14 @@ export class PlayerService {
     return this.httpClient.get<Player[]>(this.url);
   }
 
+  send(name:string, age:number, gender:string){
+
+    const player:JSON = <JSON><unknown>{
+      "name": name,
+      "age": age,
+      "gender": gender
+    }
+    this.httpClient.post(this.url, player).subscribe();
+  }
+
 }

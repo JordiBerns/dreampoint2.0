@@ -51,22 +51,6 @@ public class PieceController {
         }
     }
 
-    @PutMapping("{id}")
-    public Piece move(@PathVariable String name, @RequestBody Piece input) {
-        Optional<Piece> optionalPiece = this.pieceService.findByName(name);
-        if(optionalPiece.isPresent()) {
-            Piece target = optionalPiece.get();
-
-//            target.setName(input.getName());
-            target.setyPosition(input.getyPosition());
-            target.setxPosition(input.getxPosition());
-
-            return this.pieceService.save(target);
-        }
-        else {
-            return null;
-        }
-    }
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable long id) {

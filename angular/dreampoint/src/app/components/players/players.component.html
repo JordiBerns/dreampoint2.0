@@ -1,5 +1,11 @@
+<input type="text" [(ngModel)] = "name" name="name" placeholder="name">
+<input type="number" [(ngModel)] = "age" name="age" placeholder="age">
+<input type="text" [(ngModel)] = "gender" name="gender" placeholder="gender">
+<button (click)="send()">Player input</button>
+<button (click)="listAll()">show Players</button>
+
+
 <div>
-  Example list
   <ul>
     <li *ngFor="let player of players">id: {{player.id}} has name: {{player.name}} , has age: {{player.age}} and has gender: {{player.gender}}</li>
   </ul>
