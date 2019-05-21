@@ -51,6 +51,35 @@ public class PieceController {
         }
     }
 
+    @PostMapping("/move")
+    public void setPieceService(@RequestBody String move) {
+        System.out.println("In move: " + move);
+        Optional<Piece> optionalPiece = this.pieceService.findByName("Hero");
+        if (optionalPiece.isPresent()){
+            Piece player = optionalPiece.get();
+            switch (move.charAt(0)){
+                case 'w':
+                    System.out.println("in w");
+                    player.setyPosition(player.getyPosition() - 1);
+                    break;
+                case 'a':
+                    System.out.println("in a");
+                    player.setxPosition(player.getxPosition() - 1);
+                    break;
+                case 's':
+                    System.out.println("in s");
+                    player.setyPosition(player.getyPosition() + 1);
+                    break;
+                case 'd':
+                    System.out.println("in d");
+                    player.setxPosition(player.getxPosition() + 1);
+                    break;
+                default:
+                    System.out.println("wrong input");
+            }
+            this.pieceService.save(player);
+        }
+    }
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable long id) {

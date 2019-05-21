@@ -16,4 +16,8 @@ export class PieceService {
   list(): Observable<Piece[]> {
     return this.httpClient.get<Piece[]>(this.url);
   }
+
+  move(move:string){
+    return this.httpClient.post(this.url + '/move', move)
+  }
 }
