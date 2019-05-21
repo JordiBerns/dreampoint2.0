@@ -1,9 +1,8 @@
 package nl.yer.middleman.dreampoint.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import nl.yer.middleman.dreampoint.model.playingfield.Playingfield;
+
+import javax.persistence.*;
 
 @Entity
 public class Piece {
@@ -14,6 +13,26 @@ public class Piece {
     private String name;
     private int yPosition;
     private int xPosition;
+
+    @ManyToOne
+    private Playingfield playingfield;
+
+    public Piece(){
+    }
+
+    public Piece(Playingfield playingfield){
+        this.playingfield = playingfield;
+    }
+
+
+    public void setPlayingfield(Playingfield playingfield) {
+        this.playingfield = playingfield;
+    }
+
+    public Piece(int yPosition, int xPosition) {
+        this.yPosition = yPosition;
+        this.xPosition = xPosition;
+    }
 
     public long getId() {
         return id;
