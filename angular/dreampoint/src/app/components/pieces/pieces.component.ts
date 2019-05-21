@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Piece } from 'src/app/piece';
+import { PieceService } from 'src/app/services/piece.service';
 
 @Component({
   selector: 'app-pieces',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PiecesComponent implements OnInit {
 
-  constructor() { }
+  pieces:Piece[];
+  constructor(private pieceService:PieceService) { }
 
   ngOnInit() {
   }
 
+  listAll(){
+    this.pieceService.list().subscribe(data => {
+      this.pieces = data;
+    });
+  }
 }
