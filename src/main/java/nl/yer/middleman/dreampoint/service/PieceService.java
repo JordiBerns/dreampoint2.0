@@ -1,6 +1,6 @@
 package nl.yer.middleman.dreampoint.service;
 
-import nl.yer.middleman.dreampoint.model.Piece;
+import nl.yer.middleman.dreampoint.model.Pieces.Piece;
 import nl.yer.middleman.dreampoint.persistence.PieceRepository;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +19,8 @@ public class PieceService {
     }
 
     public Optional<Piece> findById(Long aLong) {return pieceRepository.findById(aLong);}
+
+    public Optional<Piece> findByName(String name) {return pieceRepository.findByName(name);}
 
     public Iterable<Piece> findAll() {return this.pieceRepository.findAll();}
 

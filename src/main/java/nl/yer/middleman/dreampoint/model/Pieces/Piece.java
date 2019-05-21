@@ -1,11 +1,11 @@
-package nl.yer.middleman.dreampoint.model;
+package nl.yer.middleman.dreampoint.model.Pieces;
 
 import nl.yer.middleman.dreampoint.model.playingfield.Playingfield;
 
 import javax.persistence.*;
 
 @Entity
-public class Piece {
+public abstract class Piece {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

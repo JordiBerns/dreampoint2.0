@@ -1,6 +1,6 @@
 package nl.yer.middleman.dreampoint.api;
 
-import nl.yer.middleman.dreampoint.model.Piece;
+import nl.yer.middleman.dreampoint.model.Pieces.Piece;
 import nl.yer.middleman.dreampoint.service.PieceService;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,6 +50,7 @@ public class PieceController {
             return null;
         }
     }
+
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable long id) {

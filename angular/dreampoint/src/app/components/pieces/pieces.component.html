@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <li *ngFor="let piece of pieces">id: {{piece.id}} has xpos: {{piece.xPosition}} , has ypos: {{piece.yPosition}} and has name: {{piece.name}}</li>
+  </ul>
+</div>
+
+<button (click)="listAll()">show All Pieces</button>
