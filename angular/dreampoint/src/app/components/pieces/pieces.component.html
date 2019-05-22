@@ -1,12 +1,24 @@
 <div>
   <ul>
-    <li *ngFor="let piece of pieces">id: {{piece.id}} has xpos: {{piece.xPosition}} , has ypos: {{piece.yPosition}} and has name: {{piece.name}}</li>
+    <li *ngFor="let piece of pieces">
+      id: {{ piece.id }} has xpos: {{ piece.xPosition }} , has ypos:
+      {{ piece.yPosition }} and has name: {{ piece.name }}
+    </li>
   </ul>
 </div>
 
-
-
 <button (click)="listAll()">show All Pieces</button>
 
-<input type="text" [(ngModel)] = "move" name="move" placeholder="move">
-<button (click) ="movePiece()">send character</button>
+<!-- <input type="text" [(ngModel)] = "move" name="move" placeholder="move"> -->
+<!-- <button (click) ="movePiece()">send character</button> -->
+<br />
+<br />
+
+<div>
+  <button (click)="movePieceUp()">Move up</button>
+  <br />
+  <button (click)="movePieceLeft()">Move left</button>
+  <button (click)="movePieceRight()">Move right</button>
+  <br />
+  <button (click)="movePieceDown()">Move down</button>
+</div>

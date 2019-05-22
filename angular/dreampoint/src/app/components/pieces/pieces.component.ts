@@ -22,8 +22,20 @@ export class PiecesComponent implements OnInit {
     });
   }
 
-  movePiece(){
-    this.pieceService.move(this.move).subscribe(() => this.listAll())
-    
+  movePieceLeft(){
+    this.pieceService.move(this.move="a").subscribe(() => this.listAll())
   }
+
+  movePieceRight(){
+    this.pieceService.move(this.move="d").subscribe(() => this.listAll())
+  }
+
+  movePieceUp(){
+    this.pieceService.move(this.move="w").subscribe(() => this.listAll())
+  }
+
+  movePieceDown(){
+    this.pieceService.move(this.move="s").subscribe(() => this.listAll())
+  }
+
 }

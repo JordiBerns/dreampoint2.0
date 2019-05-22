@@ -1,6 +1,7 @@
 package nl.yer.middleman.dreampoint.api;
 
 import nl.yer.middleman.dreampoint.model.Pieces.Piece;
+import nl.yer.middleman.dreampoint.model.playingfield.Playingfield;
 import nl.yer.middleman.dreampoint.service.PieceService;
 import org.springframework.web.bind.annotation.*;
 
