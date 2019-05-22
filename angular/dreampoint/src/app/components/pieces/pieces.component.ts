@@ -10,7 +10,9 @@ import { PieceService } from 'src/app/services/piece.service';
 export class PiecesComponent implements OnInit {
 
   pieces:Piece[];
-  move:string
+  move:string;
+  shot:string;
+
   constructor(private pieceService:PieceService) { }
 
   ngOnInit() {
@@ -23,6 +25,7 @@ export class PiecesComponent implements OnInit {
   }
 
   movePieceLeft(){
+    console.log("in movepiece left")
     this.pieceService.move(this.move="a").subscribe(() => this.listAll())
   }
 
@@ -36,6 +39,22 @@ export class PiecesComponent implements OnInit {
 
   movePieceDown(){
     this.pieceService.move(this.move="s").subscribe(() => this.listAll())
+  }
+
+  shootLeft(){
+    this.pieceService.shoot(this.shot="j").subscribe(() => this.listAll())
+  }
+
+  shootRight(){
+    this.pieceService.shoot(this.shot="l").subscribe(() => this.listAll())
+  }
+
+  shootUp(){
+    this.pieceService.shoot(this.shot="i").subscribe(() => this.listAll())
+  }
+
+  shootDown(){
+    this.pieceService.shoot(this.shot="k").subscribe(() => this.listAll())
   }
 
 }

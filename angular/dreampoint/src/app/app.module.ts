@@ -8,14 +8,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { PiecesComponent } from './components/pieces/pieces.component'
-import {PlayingfieldListComponent} from './components/playingfield-list/playingfield-list.component'
+import {PlayingfieldListComponent} from './components/playingfield-list/playingfield-list.component';
+import { MainmenuComponent } from './components/mainmenu/mainmenu.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PlayersComponent,
     PiecesComponent,
-    PlayingfieldListComponent
+    PlayingfieldListComponent,
+    MainmenuComponent
   ],
   imports: [
     BrowserModule,

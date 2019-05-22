@@ -20,4 +20,11 @@ export class PieceService {
   move(move:string){
     return this.httpClient.post(this.url + '/move', move)
   }
+
+  shoot(shot:string){
+    console.log("in shoot")
+
+    return this.httpClient.post(this.url + '/shoot', shot)
+  }
+
 }
