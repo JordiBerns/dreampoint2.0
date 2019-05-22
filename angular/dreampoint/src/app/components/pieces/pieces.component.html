@@ -29,9 +29,8 @@
 <table>
   <tr *ngFor ="let row of array">
     <td *ngFor = "let element of row">
-    {{element}}
+        <img src= {{element}} />
+
   </td>
   </tr>
 </table>
-
-<input type="text" [(ngModel)] = "move" name="move" placeholder="move">

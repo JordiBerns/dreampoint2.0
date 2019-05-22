@@ -10,7 +10,7 @@ import { PieceService } from 'src/app/services/piece.service';
 export class PiecesComponent implements OnInit {
 
   pieces: Piece[];
-  array = Array(10).fill('x').map(() => Array(10).fill('x'));
+  array = Array(10).fill("../../../assets/GRASS32.png").map(() => Array(10).fill("../../../assets/GRASS32.png"));
 
   move: string;
   shot: string;
@@ -24,9 +24,14 @@ export class PiecesComponent implements OnInit {
   }
 
   test() {
-    this.array = Array(10).fill('x').map(() => Array(10).fill('x'));
+    this.array = Array(10).fill("../../../assets/GRASS32.png").map(() => Array(10).fill("../../../assets/GRASS32.png"));
     for (let piece of this.pieces) {
-      this.array[piece.yPosition][piece.xPosition] = piece.name;
+      if (piece.name == "Hero"){
+        this.array [piece.yPosition][piece.xPosition] = "../../../assets/PLAYER32.png"
+      }
+      if (piece.name == "Enemy"){
+        this.array [piece.yPosition][piece.xPosition] = "../../../assets/ENEMY32.png"
+      }
     }
   }
 
