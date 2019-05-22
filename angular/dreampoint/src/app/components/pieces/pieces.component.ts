@@ -9,52 +9,106 @@ import { PieceService } from 'src/app/services/piece.service';
 })
 export class PiecesComponent implements OnInit {
 
-  pieces:Piece[];
-  move:string;
-  shot:string;
+  pieces: Piece[];
+  array = Array(10).fill('x').map(() => Array(10).fill('x'));
 
-  constructor(private pieceService:PieceService) { }
+  move: string;
+  shot: string;
+  constructor(private pieceService: PieceService) { }
 
   ngOnInit() {
+    this.listAll()
+
+
+
   }
 
-  listAll(){
+  test() {
+    this.array = Array(10).fill('x').map(() => Array(10).fill('x'));
+    for (let piece of this.pieces) {
+      this.array[piece.yPosition][piece.xPosition] = piece.name;
+    }
+  }
+
+  listAll() {
     this.pieceService.list().subscribe(data => {
       this.pieces = data;
+      this.test()
     });
   }
 
-  movePieceLeft(){
+  movePiece() {
+    this.pieceService.move(this.move).subscribe(() => {
+
+      this.listAll()
+    })
+
+  }
+  movePieceLeft() {
+
     console.log("in movepiece left")
-    this.pieceService.move(this.move="a").subscribe(() => this.listAll())
+
+    this.pieceService.move(this.move = "a").subscribe(() => this.listAll())
+
+    
   }
 
-  movePieceRight(){
-    this.pieceService.move(this.move="d").subscribe(() => this.listAll())
+
+
+  movePieceRight() {
+
+    this.pieceService.move(this.move = "d").subscribe(() => this.listAll())
+
+
   }
 
-  movePieceUp(){
-    this.pieceService.move(this.move="w").subscribe(() => this.listAll())
+
+
+  movePieceUp() {
+
+    this.pieceService.move(this.move = "w").subscribe(() => this.listAll())
+
+
   }
 
-  movePieceDown(){
-    this.pieceService.move(this.move="s").subscribe(() => this.listAll())
+
+
+  movePieceDown() {
+
+    this.pieceService.move(this.move = "s").subscribe(() => this.listAll())
+      
+
   }
 
-  shootLeft(){
-    this.pieceService.shoot(this.shot="j").subscribe(() => this.listAll())
+
+
+  shootLeft() {
+
+    this.pieceService.shoot(this.shot = "j").subscribe(() => this.listAll())
+
   }
 
-  shootRight(){
-    this.pieceService.shoot(this.shot="l").subscribe(() => this.listAll())
+
+
+  shootRight() {
+
+    this.pieceService.shoot(this.shot = "l").subscribe(() => this.listAll())
+
   }
 
-  shootUp(){
-    this.pieceService.shoot(this.shot="i").subscribe(() => this.listAll())
+
+
+  shootUp() {
+
+    this.pieceService.shoot(this.shot = "i").subscribe(() => this.listAll())
+
   }
 
-  shootDown(){
-    this.pieceService.shoot(this.shot="k").subscribe(() => this.listAll())
-  }
 
+
+  shootDown() {
+
+    this.pieceService.shoot(this.shot = "k").subscribe(() => this.listAll())
+
+  }
 }

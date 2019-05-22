@@ -1,11 +1,10 @@
 <div>
   <ul>
-    <li *ngFor="let piece of pieces">
-      id: {{ piece.id }} has xpos: {{ piece.xPosition }} , has ypos:
-      {{ piece.yPosition }} and has name: {{ piece.name }}
-    </li>
+    <li *ngFor="let piece of pieces">id: {{piece.id}} has xpos: {{piece.xPosition}} , has ypos: {{piece.yPosition}} and has name: {{piece.name}}</li>
   </ul>
 </div>
+
+
 
 <button (click)="listAll()">show All Pieces</button>
 
@@ -26,11 +25,13 @@
 <br />
 <br />
 
-<div>
-    <button (click)="shootUp()" class="btn btn-dark">Shoot up</button>
-    <br />
-    <button (click)="shootLeft()" class="btn btn-dark">Shoot left</button>
-    <button (click)="shootRight()" class="btn btn-dark">Shoot right</button>
-    <br />
-    <button (click)="shootDown()" class="btn btn-dark">Shoot down</button>
-  </div>
+
+<table>
+  <tr *ngFor ="let row of array">
+    <td *ngFor = "let element of row">
+    {{element}}
+  </td>
+  </tr>
+</table>
+
+<input type="text" [(ngModel)] = "move" name="move" placeholder="move">

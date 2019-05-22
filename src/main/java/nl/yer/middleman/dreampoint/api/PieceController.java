@@ -61,25 +61,25 @@ public class PieceController {
                 switch (move.charAt(0)) {
                     case 'w':
                         System.out.println("in w");
-                        if(player.getyPosition() -1 >= 0 && player.getyPosition() -1 <= 10) {
+                        if(player.getyPosition() -1 >= 0 && player.getyPosition() -1 < 10) {
                             player.setyPosition(player.getyPosition() - 1);
                         }
                         break;
                     case 'a':
                         System.out.println("in a");
-                        if(player.getxPosition() -1 >= 0 && player.getxPosition() -1 <= 10) {
+                        if(player.getxPosition() -1 >= 0 && player.getxPosition() -1 < 10) {
                             player.setxPosition(player.getxPosition() - 1);
                         }
                         break;
                     case 's':
                         System.out.println("in s");
-                        if(player.getyPosition() +1 >= 0 && player.getyPosition() +1 <= 10) {
+                        if(player.getyPosition() +1 >= 0 && player.getyPosition() +1 < 10) {
                             player.setyPosition(player.getyPosition() + 1);
                         }
                         break;
                     case 'd':
                         System.out.println("in d");
-                        if(player.getxPosition() +1 >= 0 && player.getxPosition() +1 <= 10) {
+                        if(player.getxPosition() +1 >= 0 && player.getxPosition() +1 < 10) {
                             player.setxPosition(player.getxPosition() + 1);
                         }
                         break;
