@@ -12,3 +12,145 @@ td{
     border: solid 1px black;
     width: 32px;
 }
+ul {
+    background-color: #414449;
+     border-radius: 10px;
+     font-family: Arial, Helvetica, sans-serif;
+     padding: 20px 30px;
+     margin-left: 20px;
+     color: whitesmoke;
+     width: 512px;
+     
+ 
+ }
+#pieceslijst{
+    width: 1024px;
+    height: 350px;
+    margin-left: 100px;
+    background-color: #27292bee;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-bottom: 10px; 
+    color: whitesmoke; 
+    margin-top: 20px;
+}
+#buttons{
+    width: 1024px;
+    height: 350px;
+    margin-left: 100px;
+    background-color: #27292bd2;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#movebuttons{
+    padding-top: 30px;
+    margin-top: 10px;
+    height: 120px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+#moveupbutton{
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left:165px;
+
+}
+#moveleftbutton{
+   
+    margin-right:20px;
+    margin-left: 60px;
+
+}
+#moverightbutton{
+   
+margin-left:267px;
+
+    margin-top: -35px;
+}
+#movedownbutton{
+    margin-top: -40px;
+    margin-left:155px;
+    margin-right:5px;
+
+}
+#shootbuttons{
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 120px;;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+#shootupbutton{
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left:165px;
+
+}
+#shootleftbutton{
+   
+    margin-right:20px;
+    margin-left: 58px;
+
+}
+#shootrightbutton{
+   
+margin-left:269px;
+margin-top: -35px;
+}
+#shootdownbutton{
+    margin-top: -40px;
+    margin-left:155px;
+    margin-right:5px;
+
+}
+
+#showallpiecesbutton{
+   
+        border-radius: 15px 50px 30px;
+        border: 2px solid rgb(153, 153, 153);
+        background-color:#414449;
+        color: white;
+        padding: 0px; 
+        width: 150px;
+        height: 40px; 
+    
+        margin-left: 20px;   
+        margin-bottom: 20px; 
+            
+}
+#piecesheader{
+    color: whitesmoke;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+#levelveld{
+    margin-top: 10px;
+    width: 1024px;
+    height: 400px;
+ 
+    background-color: #27292bd2;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#level{
+    
+
+    width: 350px;
+    height: 350px;
+    padding-top: 20px;
+    
+  
+    margin-left: auto;
+    margin-right: auto;    
+}
