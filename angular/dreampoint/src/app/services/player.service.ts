@@ -21,9 +21,18 @@ export class PlayerService {
     const player:JSON = <JSON><unknown>{
       "name": name,
       "age": age,
-      "gender": gender
+      "gender": gender,
+      "hiscore": 0
     }
     this.httpClient.post(this.url, player).subscribe();
   }
 
+  setHiscore(id:number) {
+    this.httpClient.put(this.url, id).subscribe();
+  }
+
+  showHiscore(id:number) {
+    console.log("in get hiscore to httpclient and id = " + id);
+    this.httpClient.get(this.url + "/hiscore/" + id).subscribe();
+  }
 }
