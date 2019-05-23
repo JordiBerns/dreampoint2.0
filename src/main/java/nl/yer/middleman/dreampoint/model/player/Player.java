@@ -15,6 +15,7 @@ public class Player {
     private String name;
     private int age;
     private String gender;
+    private int hiscore;
 
     @OneToOne
     private Playingfield playingfield;
@@ -57,5 +58,13 @@ public class Player {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public int getHiscore() {
+        return hiscore;
+    }
+
+    public void setHiscore(int hiscore) {
+        this.hiscore = hiscore;
     }
 }

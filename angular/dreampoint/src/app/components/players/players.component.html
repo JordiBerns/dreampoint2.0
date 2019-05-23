@@ -1,19 +1,24 @@
 <br />
 <br />
+<div id="inputfields">
+  <h1 id="playerheader">Create Your Player</h1>
+  <div ><p id="name">Name</p><input type="text" id="nameInput" [(ngModel)] = "name" name="name" placeholder="name"></div>
+  <div ><p id="agetext">Age</p><input type="number" id="ageInput" [(ngModel)] = "age" name="age" placeholder="age"></div>
+  <div ><p id="gendertext">Gender</p><input type="text" id="genderInput" [(ngModel)] = "gender" name="gender" placeholder="gender"></div>
+  <button id="createplayerbutton" (click)="send()">Create player</button>
+  <p id="info">Create your player by choosing your name, age and gender</p>
+</div>
 
-<input type="text" [(ngModel)] = "name" name="name" placeholder="name">
-<input type="number" [(ngModel)] = "age" name="age" placeholder="age">
-<input type="text" [(ngModel)] = "gender" name="gender" placeholder="gender">
-<button (click)="send()">Player input</button>
 
-<br />
-<br />
-<button (click)="listAll()">Show players</button>
-<br />
-<br />
 
-<div>
-  <ul>
-    <li *ngFor="let player of players">id: {{player.id}} has name: {{player.name}} , has age: {{player.age}} and has gender: {{player.gender}}</li>
-  </ul>
-</div> 
+<div id="showfields">
+  <h1 id="playerlistheader">Player list</h1>
+  
+  <button id="showplayerbutton" (click)="listAll()">Show players</button>
+
+
+  <div>
+    <ul>
+      <li *ngFor="let player of players">id: {{player.id}} has name: {{player.name}} , has age: {{player.age}} and has gender: {{player.gender}}</li>
+    </ul>
+  </div> </div>

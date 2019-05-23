@@ -25,6 +25,18 @@
 <br />
 <br />
 
+<div>
+  <button (click)="shootUp()" class="btn btn-dark">Shoot up</button>
+  <br />
+  <button (click)="shootLeft()" class="btn btn-dark">Shoot left</button>
+  <button (click)="shootRight()" class="btn btn-dark">Shoot right</button>
+  <br />
+  <button (click)="shootDown()" class="btn btn-dark">Shoot down</button>
+</div>
+
+<div>
+  <p>Hiscore is: {{hiScore}}</p>
+</div>
 
 <table>
   <tr *ngFor ="let row of array">

@@ -1,3 +1,4 @@
+import { PlayerService } from 'src/app/services/player.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Piece } from '../piece';
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class PieceService {
 
-  constructor(private httpClient:HttpClient) { }
+  constructor(private httpClient:HttpClient, private playerService:PlayerService) { }
 
   url = 'http://localhost:8080/api/pieces';
 
@@ -21,10 +22,11 @@ export class PieceService {
     return this.httpClient.post(this.url + '/move', move)
   }
 
-  shoot(shot:string){
-    console.log("in shoot")
+  shootPiece(id:number){
+    console.log(this.url + '/' + id) ;
+    this.playerService.setHiscore(1);
+    return this.httpClient.delete(this.url + '/' + id);
 
-    return this.httpClient.post(this.url + '/shoot', shot)
   }
 
 }
