@@ -46,7 +46,6 @@ public class PieceController {
         if (optionalPiece.isPresent()) {
             Piece target = optionalPiece.get();
 
-            // target.setName(input.getName());
             target.setyPosition(input.getyPosition());
             target.setxPosition(input.getxPosition());
 
@@ -95,32 +94,6 @@ public class PieceController {
             }
         }
     }
-
-    @PostMapping("/shoot")
-    public void shoot(@RequestBody String shot) {
-        System.out.println("In shoot: " + shot);
-        // Optional<Piece> optionalPiece = this.pieceService.findByName("Hero");
-        // if (optionalPiece.isPresent()){
-        // Piece player = optionalPiece.get();
-        switch (shot.charAt(0)) {
-        case 'i':
-            System.out.println("in i");
-            break;
-        case 'j':
-            System.out.println("in j");
-            break;
-        case 'k':
-            System.out.println("in k");
-            break;
-        case 'l':
-            System.out.println("in l");
-            break;
-        default:
-            System.out.println("wrong input");
-        }
-        // this.pieceService.save(player);
-    }
-    // }
 
     @DeleteMapping("{id}")
     public void delete(@PathVariable long id) {

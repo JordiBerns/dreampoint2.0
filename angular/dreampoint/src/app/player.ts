@@ -4,5 +4,6 @@ export class Player {
     name:string;
     age:number;
     gender:string;
+    hiscore: number;
 
 }

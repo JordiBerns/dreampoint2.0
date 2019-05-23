@@ -12,6 +12,7 @@ export class PlayersComponent implements OnInit {
   name:string;
   age:number;
   gender:string;
+  hiscore:number;
 
   private players: Player[];
 
@@ -29,5 +30,14 @@ export class PlayersComponent implements OnInit {
 
   send(){
     this.playerService.send(this.name, this.age, this.gender)
+  }
+
+  setHiscore(id:number) {
+    console.log("in set hiscore to playerservice");
+    this.playerService.setHiscore(id);
+  }
+
+  showHiscore(id:number) {
+    this.playerService.showHiscore(id);
   }
 }
