@@ -1,7 +1,121 @@
 ul {
-    background-color: bisque;
+   background-color: #414449;
     border-radius: 10px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 20px 30px;
-    margin: 10px;
+    margin-left: 20px;
+    color: whitesmoke;
+    width: 512px;
+    
+
+}
+#playerheader{
+    color: whitesmoke;
+    margin-left: 20px;
+    padding-top: 15px;
+}
+#playerlistheader{
+    color: whitesmoke;
+    margin-left: 20px;
+    padding-top: 15px;
+    margin-bottom: -10px;
+
+}
+p{
+    color: whitesmoke;
+    
+}
+#info{
+ float: right;
+ margin-right: 20px;
+}
+
+#inputfields{
+    width: 1024px;
+    height: 350px;
+    margin-left: 100px;
+    background-color: #27292bd2;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;  
+    margin-bottom: 10px;  
+}
+#showfields{
+    width: 1024px;
+    height: 350px;
+    margin-left: 100px;
+    background-color: #27292bd2;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+#showplayerbutton{
+    border-radius: 15px 50px 30px;
+    border: 2px solid rgb(153, 153, 153);
+    background-color:#414449;
+    color: white;
+    padding: 0px; 
+    width: 150px;
+    height: 40px; 
+    margin-top: 25px;
+    margin-left: 20px;   
+    margin-bottom: 20px;
+   
+    
+}
+
+#nameInput{
+    border-radius: 15px 50px 30px;
+    border: 2px solid rgb(33, 41, 46);
+    padding: 20px; 
+    width: 420px;
+    height: 15px;
+    margin-bottom: 10px;
+    
+    
+}
+#ageInput{
+    border-radius: 15px 50px 30px;
+    border: 2px solid rgb(33, 41, 46);
+    padding: 20px; 
+    width: 420px;
+    height: 15px; 
+    margin-bottom: 10px;
+}
+#genderInput{
+    border-radius: 15px 50px 30px;
+    border: 2px solid rgb(33, 41, 46);
+    padding: 20px; 
+    width: 420px;
+    height: 15px; 
+    margin-bottom: 30px;
+}
+
+#createplayerbutton{
+    border-radius: 15px 50px 30px;
+    border: 2px solid rgb(153, 153, 153);
+    background-color:#414449;
+    color: white;
+    padding: 0px; 
+    width: 150px;
+    height: 40px; 
+    margin-left: 80px;
+
+   
+    
+}
+#name{
+    margin-left:20px;
+    margin-right: 20px;
+    float: left;
+}
+#agetext{
+    margin-left:20px;
+    margin-right: 34px;
+    float: left;
+}
+#gendertext{
+    margin-left:20px;
+    margin-right: 10px;
+    float: left;
 }

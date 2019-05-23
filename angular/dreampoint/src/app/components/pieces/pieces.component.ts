@@ -14,6 +14,7 @@ export class PiecesComponent implements OnInit {
 
   move: string;
   shot: string;
+  score: number;
   constructor(private pieceService: PieceService) { }
 
   ngOnInit() {
@@ -41,6 +42,8 @@ export class PiecesComponent implements OnInit {
       this.test()
     });
   }
+
+ 
 
   movePiece() {
     this.pieceService.move(this.move).subscribe(() => {
