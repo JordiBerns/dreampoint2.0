@@ -20,7 +20,7 @@ public class PieceService {
 
     public Optional<Piece> findById(Long aLong) {return pieceRepository.findById(aLong);}
 
-    public Optional<Piece> findByName(String name) {return pieceRepository.findByName(name);}
+    public Iterable<Piece> findByPlayingfieldId(long id) {return pieceRepository.findByPlayingfieldId(id);}
 
     public Iterable<Piece> findAll() {return this.pieceRepository.findAll();}
 
