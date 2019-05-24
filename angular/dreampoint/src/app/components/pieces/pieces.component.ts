@@ -12,7 +12,7 @@ export class PiecesComponent implements OnInit {
   pieces: Piece[];
   array = Array(10)
     .fill("../../../assets/GRASS32.png")
-    .map(() => Array(10).fill("../../../assets/GRASS32.png"));
+    .map(() => Array(10).fill("../../../assets/b32.png"));
 
   move: string;
   shot: string;
@@ -25,16 +25,16 @@ export class PiecesComponent implements OnInit {
 
   test() {
     this.array = Array(10)
-      .fill("../../../assets/GRASS32.png")
-      .map(() => Array(10).fill("../../../assets/GRASS32.png"));
+      .fill("../../../assets/b32.png")
+      .map(() => Array(10).fill("../../../assets/b32.png"));
     for (let piece of this.pieces) {
       if (piece.name == "Hero") {
         this.array[piece.yPosition][piece.xPosition] =
-          "../../../assets/PLAYER32.png";
+          "../../../assets/e32.png";
       }
       if (piece.name == "Enemy") {
         this.array[piece.yPosition][piece.xPosition] =
-          "../../../assets/ENEMY32.png";
+          "../../../assets/p32.png";
       }
     }
   }
