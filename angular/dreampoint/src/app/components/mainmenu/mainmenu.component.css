@@ -25,3 +25,13 @@ h1{
     width: 150px;
     height: 40px; 
 }
+
+#createplayerbutton{
+    border-radius: 15px 50px 30px;
+    border: 2px solid rgb(153, 153, 153);
+    background-color:#414449;
+    color: white;
+    width: 200px;
+    height: 40px; 
+    
+}

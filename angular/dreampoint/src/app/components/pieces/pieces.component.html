@@ -1,35 +1,3 @@
-<div id="pieceslijst">
-  <h1 id="piecesheader">All the pieces in the field</h1>
-  <ul>
-    <li *ngFor="let piece of pieces">id: {{piece.id}} has xpos: {{piece.xPosition}} , has ypos: {{piece.yPosition}} and has name: {{piece.name}}</li>
-  </ul>
-  <button id="showallpiecesbutton"(click)="listAll()">show All Pieces</button>
-</div>
-
-
-
-
-
-<!-- <input type="text" [(ngModel)] = "move" name="move" placeholder="move"> -->
-<!-- <button (click) ="movePiece()">send character</button> -->
-
-<div id="buttons">
-    <div id="movebuttons">
-      <div id="moveupbutton"><button  (click)="movePieceUp()" class="btn btn-dark">Move up</button></div>
-      <div id="moveleftbutton"> <button (click)="movePieceLeft()" class="btn btn-dark">Move left</button></div>  
-      <div id="moverightbutton"><button (click)="movePieceRight()" class="btn btn-dark">Move right</button></div>  
-      <div id="movedownbutton"><button (click)="movePieceDown()" class="btn btn-dark">Move down</button></div>        
-      </div>
-      
-    
-      
-      <div id="shootbuttons">
-        <div id="shootupbutton"><button (click)="shootUp()" class="btn btn-dark">Shoot up</button></div>
-        <div id="shootleftbutton"><button (click)="shootLeft()" class="btn btn-dark">Shoot left</button></div>
-        <div id="shootrightbutton"><button (click)="shootRight()" class="btn btn-dark">Shoot right</button></div>
-        <div id="shootdownbutton"><button (click)="shootDown()" class="btn btn-dark">Shoot down</button></div>    
-        </div>
-</div>
 <div id="levelveld">
   <div id="level"><table>
       <tr *ngFor ="let row of array">
@@ -43,5 +11,28 @@
     
 </div>
 
+<div id="buttons">
+    <div id="movebuttons">
+      <div id="moveupbutton"><button  (click)="movePieceUp()" class="btn btn-dark">Move up</button></div>
+      <div id="moveleftbutton"> <button (click)="movePieceLeft()" class="btn btn-dark">Move left</button></div>  
+      <div id="moverightbutton"><button (click)="movePieceRight()" class="btn btn-dark">Move right</button></div>  
+      <div id="movedownbutton"><button (click)="movePieceDown()" class="btn btn-dark">Move down</button></div>        
+      </div>
+      
+      
+      <div id="shootbuttons">
+        <div id="shootupbutton"><button (click)="shootUp()" class="btn btn-dark">Shoot up</button></div>
+        <div id="shootleftbutton"><button (click)="shootLeft()" class="btn btn-dark">Shoot left</button></div>
+        <div id="shootrightbutton"><button (click)="shootRight()" class="btn btn-dark">Shoot right</button></div>
+        <div id="shootdownbutton"><button (click)="shootDown()" class="btn btn-dark">Shoot down</button></div>    
+        </div>
+</div>
 
+<div id="pieceslijst">
+  <h1 id="piecesheader">All the pieces in the field</h1>
+  <ul>
+    <li *ngFor="let piece of pieces">id: {{piece.id}} has xpos: {{piece.xPosition}} , has ypos: {{piece.yPosition}} and has name: {{piece.name}}</li>
+  </ul>
+  <button id="showallpiecesbutton"(click)="listAll()">show All Pieces</button>
+</div>
 
